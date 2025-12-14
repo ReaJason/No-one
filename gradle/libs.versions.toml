@@ -1,0 +1,51 @@
+[versions]
+jjwt = "0.13.0"
+asm = "9.9"
+javax-websocket-api = "1.1"
+byte-buddy = "1.18.2"
+commons-io = "2.20.0"
+commons-lang3 = "3.18.0"
+commons-codec = "1.19.0"
+okhttp3 = "5.3.2"
+fastjson2 = "2.0.60"
+javax-servlet-api = "3.0.1"
+java-websocket = "1.6.0"
+
+mockito = "5.19.0"
+hamcrest = "3.0"
+junit-jupiter = "5.13.4"
+junit-pioneer = "2.3.0"
+junit-platform = "1.13.4"
+testcontainers = "1.21.3"
+
+[libraries]
+jjwt-api = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jjwt" }
+jjwt-impl = { module = "io.jsonwebtoken:jjwt-impl", version.ref = "jjwt" }
+jjwt-jackson = { module = "io.jsonwebtoken:jjwt-jackson", version.ref = "jjwt" }
+byte-buddy = { module = "net.bytebuddy:byte-buddy", version.ref = "byte-buddy" }
+asm-commons = { module = "org.ow2.asm:asm-commons", version.ref = "asm" }
+javax-servlet-api = { module = "javax.servlet:javax.servlet-api", version.ref = "javax-servlet-api" }
+javax-websocket-api = { module = "javax.websocket:javax.websocket-api", version.ref = "javax-websocket-api" }
+commons-io = { module = "commons-io:commons-io", version.ref = "commons-io" }
+commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commons-lang3" }
+commons-codec = { module = "commons-codec:commons-codec", version.ref = "commons-codec" }
+okhttp3 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp3" }
+fastjson2 = { module = "com.alibaba.fastjson2:fastjson2", version.ref = "fastjson2" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito-junit-jupiter = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+hamcrest = { module = "org.hamcrest:hamcrest", version.ref = "hamcrest" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+junit-pioneer = { module = "org.junit-pioneer:junit-pioneer", version.ref = "junit-pioneer" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform" }
+junit-platform-reporting = { module = "org.junit.platform:junit-platform-reporting", version.ref = "junit-platform" }
+testcontainers = { module = "org.testcontainers:testcontainers", version.ref = "testcontainers" }
+testcontainers-junit-jupiter = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
+
+[bundles]
+mockito = ["mockito-core", "mockito-junit-jupiter"]
+testcontainers = ["testcontainers", "testcontainers-junit-jupiter"]
+jjwt = ["jjwt-api", "jjwt-impl", "jjwt-jackson"]
+
+[plugins]
+lombok = { id = "io.freefair.lombok", version = "8.14.2" }
+shadow = { id = "com.gradleup.shadow", version = "9.0.2" }
